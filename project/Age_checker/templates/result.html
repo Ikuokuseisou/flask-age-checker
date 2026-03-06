@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+    </head>
+    <body>
+
+        <div class="container">
+
+        <h1>判定結果</h1>
+
+        <p>年齢は{{age}}歳です</p>
+
+        {% if age < 0 or age > 120 %}
+         <p>実年齢を入力してください</p>
+        {% elif age >= 18 %}
+         <p>成人です</p>
+        {% else %}
+         <p>未成年です</p>
+
+        {% endif %}
+
+        <br>
+
+        <a href="/">戻る</a>
+
+        </div>
+
+    </body>
+</html>
+

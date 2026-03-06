@@ -1,0 +1,19 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+</head>
+    <body>
+        <div class="container">
+        
+        <h1>年齢チェックアプリ</h1>
+
+        <form action="/submit" method="POST">
+
+            <input type ="text" name ="age" placeholder="年齢を入力してください">
+            <button type = "submit">判定</button>
+            
+        </form>
+
+        </div>
+    </body>
+</html>
