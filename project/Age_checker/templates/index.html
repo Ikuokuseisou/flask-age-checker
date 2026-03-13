@@ -5,14 +5,22 @@
     <body>
         <div class="container">
         
+        <div class="card">
+        
         <h1>年齢チェックアプリ</h1>
 
         <form action="/submit" method="POST">
 
-            <input type ="text" name ="age" placeholder="年齢を入力してください">
+            <input type ="number" name ="age" min = "0" max="120" placeholder="年齢を入力してください" required>
             <button type = "submit">判定</button>
             
         </form>
+        
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        
+        </div>
 
         </div>
     </body>
